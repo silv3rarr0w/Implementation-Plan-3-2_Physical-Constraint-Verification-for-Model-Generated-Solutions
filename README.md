@@ -52,10 +52,10 @@ MP_API_KEY=你的Materials_Project_API密钥
 
 ### 3. 运行顺序
 
-三个 notebook 按流水线顺序运行，**前一个的输出是后一个的输入**：
+三个 notebook 按流水线顺序运行，**方案2的输出是方案1的输入**：
 
 ```
-方案1 凸包计算.ipynb        →  方案2 温度气氛校验.ipynb    →  方案三 动力学计算.ipynb
+方案1 凸包计算.ipynb        →  方案2 温度气氛校验.ipynb    →  方案3 动力学计算.ipynb
      ↓                               ↓                              ↓
  scheme1_export.json           (读取方案1的JSON)              (独立运行)
 (214条条目含MACE预测)
@@ -99,7 +99,7 @@ MP_API_KEY=你的Materials_Project_API密钥
 |------|------|----------|----------|
 | 方案1 | 0K 凸包 + ML 力场补全 | pymatgen PhaseDiagram + MACE-MP-0 | — |
 | 方案2 | SISSO 高温 Gibbs 修正 + 气氛化学势 | Bartel et al. (2018) | [*Nat. Commun.* 2018](https://doi.org/10.1038/s41467-018-06682-4) |
-| 方案三 | 粗→细 CI-NEB + KSP 反应网络 | ASE NEB + rxn-network | [*Nat. Commun.* 2021](https://doi.org/10.1038/s41467-021-23339-x) |
+| 方案3 | 粗→细 CI-NEB + KSP 反应网络 | ASE NEB + rxn-network | [*Nat. Commun.* 2021](https://doi.org/10.1038/s41467-021-23339-x) |
 
 ---
 
