@@ -52,7 +52,7 @@ MP_API_KEY=你的Materials_Project_API密钥
 
 ### 3. 运行顺序
 
-三个 notebook 按流水线顺序运行，**方案2的输出是方案1的输入**：
+三个 notebook 按流水线顺序运行，**方案1的输出是方案2的输入**：
 
 ```
 方案1 凸包计算.ipynb        →  方案2 温度气氛校验.ipynb    →  方案3 动力学计算.ipynb
