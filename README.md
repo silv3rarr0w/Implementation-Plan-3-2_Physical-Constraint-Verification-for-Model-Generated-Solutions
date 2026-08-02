@@ -118,8 +118,6 @@ MP_API_KEY=你的Materials_Project_API密钥
 
 | 问题 | 原因 | 解决 |
 |------|------|------|
-| `NameError: entries not defined` | 跳过了上游 Cell | 依次从 Cell 5 开始运行 |
-| `TypeError: keys must be str...` | 数据序列化异常 | 重启 kernel + 重新运行 |
 | MACE-MP-0 运行慢 | CPU 模式 | 安装 CUDA 版 torch |
-| 方案2 显示 `模型预测: ?` | 旧版方案1导出 | 重新运行方案1的Cell 8 |
 | `MP_API_KEY missing` | API Key 未配置 | 检查 `api/myapi.env` |
+| 获取 MP 数据报错 | 网络不稳定 | 重新运行该cell |
