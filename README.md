@@ -87,7 +87,7 @@ MP_API_KEY=你的Materials_Project_API密钥
 | 步骤 | 说明 |
 |------|------|
 | 修改 `TARGET_FORMULA` | 目标化合物化学式 |
-| 修改 `VALIDATION_MODE` | `True`=快速验证(前5条边), `False`=完整运行 |
+| 修改 `DEBUG_MODE` | `True`=调试模式(仅跑前N条边), `False`=完整运行 |
 | 运行全部 Cell | 两阶段 CI-NEB（粗筛→精修）+ KSP 图搜索 |
 | 输出 | `kinetics_network_report.md` — 合成/分解最优路径 |
 
@@ -110,7 +110,7 @@ MP_API_KEY=你的Materials_Project_API密钥
 | `api/myapi.env` | `MP_API_KEY` | Materials Project API 密钥 |
 | 方案1 Cell 2 | `system`, `HULL_THRESHOLD`, `DEBUG_MODE` | 化学体系 + 近稳阈值 + 调试开关 |
 | 方案2 Cell 2 | `temperatures_C`, `ATMOSPHERES` | 烧结温度 + 气氛条件 |
-| 方案3 Cell 3 | `TARGET_FORMULA`, `VALIDATION_MODE` | 目标化合物 + 验证模式 |
+| 方案三 Cell 3 | `TARGET_FORMULA`, `DEBUG_MODE` | 目标化合物 + 调试开关 |
 
 ---
 
