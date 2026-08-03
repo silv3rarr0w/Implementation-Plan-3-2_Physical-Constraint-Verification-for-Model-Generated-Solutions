@@ -91,6 +91,10 @@ MP_API_KEY=你的Materials_Project_API密钥
 | 运行全部 Cell | 两阶段 CI-NEB（粗筛→精修）+ KSP 图搜索 |
 | 输出 | `kinetics_network_report.md` — 合成/分解最优路径 |
 
+★该步骤耗时较长，强烈建议打开gpu加速
+
+★初次运行建议打开debug mode可以显著缩短运行时间，以验证代码可行性，之后再关闭以得到完整结果
+
 ---
 
 ## 方法概要
