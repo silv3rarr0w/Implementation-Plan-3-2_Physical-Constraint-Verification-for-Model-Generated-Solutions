@@ -9,18 +9,14 @@
 ```
 粉体项目调研/
 ├── api/
-│   └── myapi.env                 # API Key 配置（不纳入版本控制）
+│   └── myapi.env                 # API Key 配置
 ├── 方案1/                         # 凸包热力学初筛
-│   ├── 凸包计算.ipynb             # ★ 主 notebook
-│   ├── output.md                  # 输出报告
-│   └── 校准/
-│       └── 凸包计算验证.ipynb     # 校准验证
+│   └── 凸包计算.ipynb             # ★ 主 notebook
 ├── 方案2/                         # 温度 + 气氛校验
-│   ├── 温度气氛校验.ipynb         # ★ 主 notebook
-│   └── temperature_analysis.md    # 输出报告
+│   └── 温度气氛校验.ipynb         # ★ 主 notebook
 ├── 方案3/                        # CI-NEB 动力学反应路径
 │   └── 动力学计算.ipynb           # ★ 主 notebook
-├── ref/                           # 参考文献与方法论说明
+├── ref/                           # 参考文献
 ├── requirements.txt               # 完整 Python 依赖
 └── README.md
 ```
