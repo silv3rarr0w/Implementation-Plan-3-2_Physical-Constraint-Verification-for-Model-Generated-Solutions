@@ -8,7 +8,7 @@
 
 ## 1. 项目简介
 
-- 输入：目标化合物（如 `YMnO3`、`YBa2Cu3O6.5`、`MgMo3(PO4)3O`）及其化学体系
+- 输入：目标化合物（如 `MgMo3(PO4)3O`、`Fe2SiS4`）及其化学体系
 - 输出：
   - 0K 凸包稳定性（方案1）
   - 多温度/气氛稳定性与分解路径（方案2）
@@ -99,21 +99,6 @@ MP_API_KEY=你的Materials_Project_API密钥
 
 > 方案3 直接读取方案1 的 `scheme1_export.json`，不需要方案2 导出文件。
 
-### 最小示例：YBCO 已知模式验证
-
-方案3 配置（化学体系无需配置，自动从方案1 scheme1_export.json 同步）：
-
-```python
-TARGET_FORMULA = "Ba4Y2Cu6O13"
-NET_REACTION_KNOWN = True
-MANUAL_PRECURSORS = ["Y2O3", "BaO2", "CuO"]
-KNOWN_BYPRODUCTS = ["O2"]
-T_SYNTHESIS_C = 927                    # 单位：°C（≈1200 K，四舍五入整数）
-E_ABOVE_HULL_CUTOFF = 0.1
-```
-
-运行后输出 `kinetics_network_v2_report.md`，可对比论文 Table 4。
-
 ---
 
 ## 5. 方案1：凸包计算
@@ -185,7 +170,7 @@ E_ABOVE_HULL_CUTOFF = 0.1
 | 副产物 | 手动指定（`KNOWN_BYPRODUCTS`） | 自动推导 |
 | 搜索范围 | 前驱体 → 目标(+副产物) | 所有能生成目标的反应 |
 | 用途 | 验证配方 / 复现论文 | 新化合物路线设计 |
-| 典型体系 | YMnO₃、YBCO | MgMo₃(PO₄)₃O |
+| 典型体系 | Fe₂SiS₄ | MgMo₃(PO₄)₃O |
 | 关键开关 | `NET_REACTION_KNOWN = True` | `NET_REACTION_KNOWN = False` |
 
 探索模式额外过滤：**metathesis 式过滤**——保留副产物不含目标元素的反应。
@@ -196,8 +181,6 @@ E_ABOVE_HULL_CUTOFF = 0.1
 
 | 体系 | 模式 | 论文对照 |
 |------|------|---------|
-| YMnO₃ | 已知总反应 | Table 1 |
-| YBa₂Cu₃O₆.₅ (YBCO) | 已知总反应 | Table 4 |
 | MgMo₃(PO₄)₃O | 探索模式 / 定向验证 | Eq. 7/8/9 |
 | Fe₂SiS₄ | 已知总反应 | Table 3 |
 
